@@ -46,8 +46,8 @@ def profile(request, username):
     page_number = request.GET.get('page')
     page_obj = paginator(posts, NUMBER_OF_POSTS, page_number)
     post_counter = posts.count()
-    if not isinstance(request.user, AnonymousUser):
-        if Follow.objects.filter(user=request.user):
+    if (not isinstance(request.user, AnonymousUser) and
+        Follow.objects.filter(user=request.user)):
             following = True
     context = {
         'title': title,
