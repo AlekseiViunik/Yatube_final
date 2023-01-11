@@ -11,4 +11,32 @@ Everybody who is authenticated can see all the posts of group, all the posts of 
 Любой, у кого есть доступ, может просматривать все посты группы и все посты автора.
 ```
 
+## Running project in dev-mode/Запуск проекта в dev-режиме
 
+Clone repository. Install and activate virtual environment./
+Клонировать репозиторий. Установить и активировать виртуальное окружение.
+
+```
+- For Mac or Linux:
+$ python3 -m venv venv
+$ source venv/bin/activate
+
+- For Windows
+$ python3 -m venv venv
+$ source venv/Scripts/activate 
+``` 
+
+Install dependencies  from requirements.txt./
+Установить зависимости из файла requirements.txt.
+
+```
+pip install -r requirements.txt
+``` 
+
+Run migrations and run the project./
+Выполнить миграции и запустить проект.
+
+```
+python3 manage.py migrate
+python3 manage.py runserver
+``` 
